@@ -1,0 +1,24 @@
+   </script>
+  <audio id="music" src="suses.mp3" loop></audio>  <!-- Müzik dosyasının yolunu belirtin -->
+    <button onclick="toggleMusic()">Müziği Aç/Kapat</button>
+
+    <script>
+        const music = document.getElementById('music');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+  <script>
+        // Sağ tıklandığında sesi çal
+        window.addEventListener('contextmenu', playSound);
+
+        function playSound() {
+            const audio = new Audio('bom.mp3');  // Ses dosyasının yolunu belirtin
+            audio.play();
+        }
+    </script>
